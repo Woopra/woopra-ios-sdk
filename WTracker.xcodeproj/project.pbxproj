@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6102801016B033C800EDE529 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102800F16B033C800EDE529 /* Foundation.framework */; };
+		6102801516B033C800EDE529 /* WTracker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6102801416B033C800EDE529 /* WTracker.h */; };
+		6102801716B033C800EDE529 /* WTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102801616B033C800EDE529 /* WTracker.m */; };
+		6102801F16B0348700EDE529 /* WVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102801E16B0348700EDE529 /* WVisitor.m */; };
+		6102802516B03D1000EDE529 /* WEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102802416B03D1000EDE529 /* WEvent.m */; };
+		61CFD05616B081BF00FD1BD0 /* WPropertiesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFD05516B081BF00FD1BD0 /* WPropertiesContainer.m */; };
+		61CFD06116B089E200FD1BD0 /* WPinger.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFD06016B089E200FD1BD0 /* WPinger.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6102800A16B033C800EDE529 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				6102801516B033C800EDE529 /* WTracker.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6102800C16B033C800EDE529 /* libWTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWTracker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6102800F16B033C800EDE529 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6102801316B033C800EDE529 /* WTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WTracker-Prefix.pch"; sourceTree = "<group>"; };
+		6102801416B033C800EDE529 /* WTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTracker.h; sourceTree = "<group>"; };
+		6102801616B033C800EDE529 /* WTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTracker.m; sourceTree = "<group>"; };
+		6102801D16B0348700EDE529 /* WVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVisitor.h; sourceTree = "<group>"; };
+		6102801E16B0348700EDE529 /* WVisitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVisitor.m; sourceTree = "<group>"; };
+		6102802316B03D1000EDE529 /* WEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEvent.h; sourceTree = "<group>"; };
+		6102802416B03D1000EDE529 /* WEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEvent.m; sourceTree = "<group>"; };
+		61CFCFED16B06FCA00FD1BD0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		61CFCFF016B06FCA00FD1BD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		61CFD05416B081BF00FD1BD0 /* WPropertiesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPropertiesContainer.h; sourceTree = "<group>"; };
+		61CFD05516B081BF00FD1BD0 /* WPropertiesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPropertiesContainer.m; sourceTree = "<group>"; };
+		61CFD05F16B089E200FD1BD0 /* WPinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPinger.h; sourceTree = "<group>"; };
+		61CFD06016B089E200FD1BD0 /* WPinger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPinger.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6102800916B033C800EDE529 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6102801016B033C800EDE529 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6102800116B033C800EDE529 = {
+			isa = PBXGroup;
+			children = (
+				6102801116B033C800EDE529 /* WTracker */,
+				6102800E16B033C800EDE529 /* Frameworks */,
+				6102800D16B033C800EDE529 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6102800D16B033C800EDE529 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6102800C16B033C800EDE529 /* libWTracker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6102800E16B033C800EDE529 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6102800F16B033C800EDE529 /* Foundation.framework */,
+				61CFCFED16B06FCA00FD1BD0 /* UIKit.framework */,
+				61CFCFF016B06FCA00FD1BD0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6102801116B033C800EDE529 /* WTracker */ = {
+			isa = PBXGroup;
+			children = (
+				6102801416B033C800EDE529 /* WTracker.h */,
+				6102801616B033C800EDE529 /* WTracker.m */,
+				6102801D16B0348700EDE529 /* WVisitor.h */,
+				6102801E16B0348700EDE529 /* WVisitor.m */,
+				6102802316B03D1000EDE529 /* WEvent.h */,
+				6102802416B03D1000EDE529 /* WEvent.m */,
+				61CFD05416B081BF00FD1BD0 /* WPropertiesContainer.h */,
+				61CFD05516B081BF00FD1BD0 /* WPropertiesContainer.m */,
+				61CFD05F16B089E200FD1BD0 /* WPinger.h */,
+				61CFD06016B089E200FD1BD0 /* WPinger.m */,
+				6102801216B033C800EDE529 /* Supporting Files */,
+			);
+			path = WTracker;
+			sourceTree = "<group>";
+		};
+		6102801216B033C800EDE529 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6102801316B033C800EDE529 /* WTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6102800B16B033C800EDE529 /* WTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6102801A16B033C800EDE529 /* Build configuration list for PBXNativeTarget "WTracker" */;
+			buildPhases = (
+				6102800816B033C800EDE529 /* Sources */,
+				6102800916B033C800EDE529 /* Frameworks */,
+				6102800A16B033C800EDE529 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WTracker;
+			productName = WTracker;
+			productReference = 6102800C16B033C800EDE529 /* libWTracker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6102800316B033C800EDE529 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 6102800616B033C800EDE529 /* Build configuration list for PBXProject "WTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6102800116B033C800EDE529;
+			productRefGroup = 6102800D16B033C800EDE529 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6102800B16B033C800EDE529 /* WTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6102800816B033C800EDE529 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6102801716B033C800EDE529 /* WTracker.m in Sources */,
+				6102801F16B0348700EDE529 /* WVisitor.m in Sources */,
+				6102802516B03D1000EDE529 /* WEvent.m in Sources */,
+				61CFD05616B081BF00FD1BD0 /* WPropertiesContainer.m in Sources */,
+				61CFD06116B089E200FD1BD0 /* WPinger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6102801816B033C800EDE529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = .;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6102801916B033C800EDE529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = .;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6102801B16B033C800EDE529 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WTracker.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WTracker/WTracker-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6102801C16B033C800EDE529 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WTracker.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WTracker/WTracker-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6102800616B033C800EDE529 /* Build configuration list for PBXProject "WTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6102801816B033C800EDE529 /* Debug */,
+				6102801916B033C800EDE529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6102801A16B033C800EDE529 /* Build configuration list for PBXNativeTarget "WTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6102801B16B033C800EDE529 /* Debug */,
+				6102801C16B033C800EDE529 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6102800316B033C800EDE529 /* Project object */;
+}
