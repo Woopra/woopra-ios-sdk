@@ -2,7 +2,7 @@
 //  WTracker.m
 //  WTracker
 //
-//  Created by Boris Remizov on 1/23/13.
+//  Created by Woopra on 1/23/13.
 //
 //
 
