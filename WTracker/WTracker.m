@@ -9,7 +9,7 @@
 #import "WTracker.h"
 #import "WPinger.h"
 
-static NSString* const WEventEndpoint = @"https://www.woopra.com/track/ce/";
+static NSString* const WEventEndpoint = @"http://www.woopra.com/track/ce/";
 
 @implementation WTracker
 
