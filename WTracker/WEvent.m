@@ -20,9 +20,24 @@
 	self = [super init];
 	if (!self) return nil;
 
-	[self addProperty:@"name" value:name];
+	[self addProperty:@"~event" value:name];
 
 	return self;
+}
+
+- (void) withBrowser:(NSString *)browser
+{
+    [self addProperty:@"~browser" value:browser];
+}
+
+- (void) withOS:(NSString *)os
+{
+    [self addProperty:@"~os" value:os];
+}
+
+- (void) withIP:(NSString *)ip
+{
+    [self addProperty:@"~ip" value:ip];
 }
 
 @end

@@ -14,6 +14,8 @@
 		6102802516B03D1000EDE529 /* WEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102802416B03D1000EDE529 /* WEvent.m */; };
 		61CFD05616B081BF00FD1BD0 /* WPropertiesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFD05516B081BF00FD1BD0 /* WPropertiesContainer.m */; };
 		61CFD06116B089E200FD1BD0 /* WPinger.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFD06016B089E200FD1BD0 /* WPinger.m */; };
+		8F7CF81C1A254EE100263141 /* Test0.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CF81B1A254EE100263141 /* Test0.m */; };
+		8F7CF81E1A25521B00263141 /* libWTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102800C16B033C800EDE529 /* libWTracker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +47,7 @@
 		61CFD05516B081BF00FD1BD0 /* WPropertiesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPropertiesContainer.m; sourceTree = "<group>"; };
 		61CFD05F16B089E200FD1BD0 /* WPinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPinger.h; sourceTree = "<group>"; };
 		61CFD06016B089E200FD1BD0 /* WPinger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPinger.m; sourceTree = "<group>"; };
+		8F7CF81B1A254EE100263141 /* Test0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test0.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7CF81E1A25521B00263141 /* libWTracker.a in Frameworks */,
 				6102801016B033C800EDE529 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +104,7 @@
 				61CFD05F16B089E200FD1BD0 /* WPinger.h */,
 				61CFD06016B089E200FD1BD0 /* WPinger.m */,
 				6102801216B033C800EDE529 /* Supporting Files */,
+				8F7CF81B1A254EE100263141 /* Test0.m */,
 			);
 			path = WTracker;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7CF81C1A254EE100263141 /* Test0.m in Sources */,
 				6102801716B033C800EDE529 /* WTracker.m in Sources */,
 				6102801F16B0348700EDE529 /* WVisitor.m in Sources */,
 				6102802516B03D1000EDE529 /* WEvent.m in Sources */,

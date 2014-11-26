@@ -67,7 +67,7 @@ static WPinger* gPinger = nil;
 		return FALSE;
 	}
 	
-	NSMutableString* parameters = [NSMutableString stringWithFormat:@"?host=%@&cookie=%@&response=xml&timeout=%d",
+	NSMutableString* parameters = [NSMutableString stringWithFormat:@"?app=ios&host=%@&cookie=%@&response=xml&timeout=%d",
 								   self.domain, self.visitor.cookie, (int)(self.idleTimeout * 1000)];
 	if (self.referer)
 		[parameters appendFormat:@"&referer=%@", self.referer];
@@ -79,8 +79,16 @@ static WPinger* gPinger = nil;
 	
 	// Add Event Properties
 	prop = event.properties;
-	for (NSString* k in prop)
-		[parameters appendFormat:@"&ce_%@=%@", k, [prop objectForKey:k]];
+    for (NSString* k in prop){
+        if([k hasPrefix:@"~"]){
+            /*
+             * system property
+             */
+            [parameters appendFormat:@"&%@=%@", [k substringFromIndex:1], [prop objectForKey:k]];
+        }else{
+            [parameters appendFormat:@"&ce_%@=%@", k, [prop objectForKey:k]];
+        }
+    }
 	
 	// submit asynchronous track request
 	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:
