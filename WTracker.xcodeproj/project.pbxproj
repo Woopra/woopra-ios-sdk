@@ -14,9 +14,19 @@
 		6102802516B03D1000EDE529 /* WEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102802416B03D1000EDE529 /* WEvent.m */; };
 		61CFD05616B081BF00FD1BD0 /* WPropertiesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFD05516B081BF00FD1BD0 /* WPropertiesContainer.m */; };
 		61CFD06116B089E200FD1BD0 /* WPinger.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CFD06016B089E200FD1BD0 /* WPinger.m */; };
-		8F7CF81C1A254EE100263141 /* Test0.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F7CF81B1A254EE100263141 /* Test0.m */; };
-		8F7CF81E1A25521B00263141 /* libWTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102800C16B033C800EDE529 /* libWTracker.a */; };
+		A127425A1AF886B300AA98A3 /* WTracker_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12742591AF886B300AA98A3 /* WTracker_Tests.m */; };
+		A127425B1AF886B300AA98A3 /* libWTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102800C16B033C800EDE529 /* libWTracker.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A127425C1AF886B300AA98A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6102800316B033C800EDE529 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6102800B16B033C800EDE529;
+			remoteInfo = WTracker;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6102800A16B033C800EDE529 /* CopyFiles */ = {
@@ -47,7 +57,9 @@
 		61CFD05516B081BF00FD1BD0 /* WPropertiesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPropertiesContainer.m; sourceTree = "<group>"; };
 		61CFD05F16B089E200FD1BD0 /* WPinger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPinger.h; sourceTree = "<group>"; };
 		61CFD06016B089E200FD1BD0 /* WPinger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPinger.m; sourceTree = "<group>"; };
-		8F7CF81B1A254EE100263141 /* Test0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test0.m; sourceTree = "<group>"; };
+		A12742551AF886B300AA98A3 /* WTracker Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WTracker Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12742581AF886B300AA98A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A12742591AF886B300AA98A3 /* WTracker_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTracker_Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +67,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F7CF81E1A25521B00263141 /* libWTracker.a in Frameworks */,
 				6102801016B033C800EDE529 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A12742521AF886B300AA98A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A127425B1AF886B300AA98A3 /* libWTracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				6102801116B033C800EDE529 /* WTracker */,
+				A12742561AF886B300AA98A3 /* WTracker Tests */,
 				6102800E16B033C800EDE529 /* Frameworks */,
 				6102800D16B033C800EDE529 /* Products */,
 			);
@@ -76,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				6102800C16B033C800EDE529 /* libWTracker.a */,
+				A12742551AF886B300AA98A3 /* WTracker Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,7 +125,6 @@
 				61CFD05F16B089E200FD1BD0 /* WPinger.h */,
 				61CFD06016B089E200FD1BD0 /* WPinger.m */,
 				6102801216B033C800EDE529 /* Supporting Files */,
-				8F7CF81B1A254EE100263141 /* Test0.m */,
 			);
 			path = WTracker;
 			sourceTree = "<group>";
@@ -113,6 +133,23 @@
 			isa = PBXGroup;
 			children = (
 				6102801316B033C800EDE529 /* WTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A12742561AF886B300AA98A3 /* WTracker Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A12742591AF886B300AA98A3 /* WTracker_Tests.m */,
+				A12742571AF886B300AA98A3 /* Supporting Files */,
+			);
+			path = "WTracker Tests";
+			sourceTree = "<group>";
+		};
+		A12742571AF886B300AA98A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A12742581AF886B300AA98A3 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,13 +174,36 @@
 			productReference = 6102800C16B033C800EDE529 /* libWTracker.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		A12742541AF886B300AA98A3 /* WTracker Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A127425E1AF886B300AA98A3 /* Build configuration list for PBXNativeTarget "WTracker Tests" */;
+			buildPhases = (
+				A12742511AF886B300AA98A3 /* Sources */,
+				A12742521AF886B300AA98A3 /* Frameworks */,
+				A12742531AF886B300AA98A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A127425D1AF886B300AA98A3 /* PBXTargetDependency */,
+			);
+			name = "WTracker Tests";
+			productName = "WTracker Tests";
+			productReference = A12742551AF886B300AA98A3 /* WTracker Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		6102800316B033C800EDE529 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0630;
+				TargetAttributes = {
+					A12742541AF886B300AA98A3 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
 			};
 			buildConfigurationList = 6102800616B033C800EDE529 /* Build configuration list for PBXProject "WTracker" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -158,16 +218,26 @@
 			projectRoot = "";
 			targets = (
 				6102800B16B033C800EDE529 /* WTracker */,
+				A12742541AF886B300AA98A3 /* WTracker Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A12742531AF886B300AA98A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6102800816B033C800EDE529 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F7CF81C1A254EE100263141 /* Test0.m in Sources */,
 				6102801716B033C800EDE529 /* WTracker.m in Sources */,
 				6102801F16B0348700EDE529 /* WVisitor.m in Sources */,
 				6102802516B03D1000EDE529 /* WEvent.m in Sources */,
@@ -176,7 +246,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A12742511AF886B300AA98A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A127425A1AF886B300AA98A3 /* WTracker_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A127425D1AF886B300AA98A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6102800B16B033C800EDE529 /* WTracker */;
+			targetProxy = A127425C1AF886B300AA98A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6102801816B033C800EDE529 /* Debug */ = {
@@ -201,6 +287,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = .;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -249,6 +336,76 @@
 			};
 			name = Release;
 		};
+		A127425F1AF886B300AA98A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "WTracker Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A12742601AF886B300AA98A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "WTracker Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -269,6 +426,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A127425E1AF886B300AA98A3 /* Build configuration list for PBXNativeTarget "WTracker Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A127425F1AF886B300AA98A3 /* Debug */,
+				A12742601AF886B300AA98A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
