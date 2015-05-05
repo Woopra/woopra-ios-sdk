@@ -6,41 +6,40 @@
 //
 //
 
+#import <UIKit/UIKit.h>
+#import <XCTest/XCTest.h>
 
-#import "WTracker.h"
-#import "WEvent.h"
-
-@interface Test0 : NSObject
+@interface WTracker_Tests : XCTestCase
 
 @end
 
-@implementation Test0
+@implementation WTracker_Tests
 
 - (void)setUp {
     [WTracker sharedInstance].domain = @"jadyounan.com";
-    
-    
+
+
 }
 
 - (void)tearDown {
-    
+
 }
 
 - (void)testExample {
-    
+
     // create event "appview"
     WEvent* event = [WEvent eventWithName:@"test event"];
-    
+
     // add property "view" with value "login-view"
     [event addProperty:@"abc" value:@"def"];
-    
+
     // track event
     [[WTracker sharedInstance] trackEvent:event];
-    
+
 }
 
 - (void)testPerformanceExample {
-    
+
 }
 
 @end

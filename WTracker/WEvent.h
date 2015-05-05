@@ -13,12 +13,6 @@
 
 - (id)initWithName:(NSString*)name;
 
-- (void)withBrowser:(NSString*)browser;
-
-- (void)withOS:(NSString*)os;
-
-- (void)withIP:(NSString*)ip;
-
 + (WEvent*)eventWithName:(NSString*)name;
 
 @end

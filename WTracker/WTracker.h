@@ -8,9 +8,10 @@
 
 #import <WTracker/WVisitor.h>
 #import <WTracker/WEvent.h>
+#import <WTracker/WPropertiesContainer.h>
 #import <Foundation/Foundation.h>
 
-@interface WTracker : NSObject
+@interface WTracker : WPropertiesContainer
 
 // Identifies which project environment your sending this tracking request to.
 @property (nonatomic, copy) NSString* domain;

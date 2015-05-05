@@ -8,6 +8,7 @@
 
 #import "WTracker.h"
 #import "WPinger.h"
+#import <UIKit/UIKit.h>
 
 static NSString* const WEventEndpoint = @"http://www.woopra.com/track/ce/";
 
@@ -32,14 +33,19 @@ static WPinger* gPinger = nil;
 	return gSingleton;
 }
 
-- (id)init
+- (instancetype)init
 {
 	self = [super init];
 	if (!self) return nil;
 	
 	// default timeout value for Woopra service
 	self.idleTimeout = 30.0;
-	
+
+    // initialize some properties
+    [self addProperty:@"device" value:[UIDevice currentDevice].model];
+    [self addProperty:@"os" value:[NSString stringWithFormat:@"%@ %@", [UIDevice currentDevice].systemName, [UIDevice currentDevice].systemVersion]];
+    [self addProperty:@"browser" value:[[NSBundle mainBundle] objectForInfoDictionaryKey:(__bridge NSString*)kCFBundleNameKey]];
+
 	return self;
 }
 
@@ -48,7 +54,7 @@ static WPinger* gPinger = nil;
 	self.domain = nil;
 	self.visitor = nil;
 	self.referer = nil;
-	
+
 	[super dealloc];
 }
 
@@ -71,7 +77,11 @@ static WPinger* gPinger = nil;
 								   self.domain, self.visitor.cookie, (int)(self.idleTimeout * 1000)];
 	if (self.referer)
 		[parameters appendFormat:@"&referer=%@", self.referer];
-	
+
+    // Add self's properties
+    for (NSString* k in self.properties)
+        [parameters appendFormat:@"ce_%@=%@", k, self.properties[k]];
+
 	// Add visitors properties
 	NSDictionary* prop = self.visitor.properties;
 	for (NSString* k in prop)
