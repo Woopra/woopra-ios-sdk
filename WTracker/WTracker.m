@@ -79,17 +79,20 @@ static WPinger* gPinger = nil;
         [parameters appendFormat:@"ce_%@=%@", k, self.properties[k]];
 
     // Add device data
-    [parameters appendFormat:@"&device=%@", [UIDevice currentDevice].model];
+    if([[UIDevice currentDevice].systemName hasPrefix:@"iPhone"]){
+        [parameters appendFormat:@"&device=%@", @"m"];
+    }else{
+        [parameters appendFormat:@"&device=%@", @"t"];
+    }
 
     [parameters appendFormat:@"&os=%@", [NSString stringWithFormat:@"%@ %@", [UIDevice currentDevice].systemName, [UIDevice currentDevice].systemVersion]];
-
     //[parameters appendFormat:@"&browser=%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:(__bridge NSString*)kCFBundleNameKey]];
 
 	// Add visitors properties
 	NSDictionary* prop = self.visitor.properties;
 	for (NSString* k in prop)
 		[parameters appendFormat:@"&cv_%@=%@", k, [prop objectForKey:k]];
-	
+
 	// Add Event Properties
 	prop = event.properties;
     for (NSString* k in prop){
@@ -108,7 +111,7 @@ static WPinger* gPinger = nil;
 	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:
 									[NSURL URLWithString: [[WEventEndpoint stringByAppendingString:parameters] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
 	[NSURLConnection connectionWithRequest:request delegate:self];
-	
+    NSLog(@"parameters: %@", parameters);
 	return TRUE;
 }
 
