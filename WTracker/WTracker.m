@@ -19,6 +19,7 @@ static NSString* const WEventEndpoint = @"http://www.woopra.com/track/ce/";
 static WTracker* gSingleton = nil;
 static WPinger* gPinger = nil;
 
+
 + (WTracker*)sharedInstance
 {
 	if (nil == gSingleton)
@@ -41,11 +42,6 @@ static WPinger* gPinger = nil;
 	// default timeout value for Woopra service
 	self.idleTimeout = 30.0;
 
-    // initialize some properties
-    [self addProperty:@"device" value:[UIDevice currentDevice].model];
-    [self addProperty:@"os" value:[NSString stringWithFormat:@"%@ %@", [UIDevice currentDevice].systemName, [UIDevice currentDevice].systemVersion]];
-    [self addProperty:@"browser" value:[[NSBundle mainBundle] objectForInfoDictionaryKey:(__bridge NSString*)kCFBundleNameKey]];
-
 	return self;
 }
 
@@ -66,13 +62,13 @@ static WPinger* gPinger = nil;
 		NSLog(@"WTracker.domain property must be set before [WTracker trackEvent:] invocation. Ex.: tracker.domain = mywebsite.com");
 		return FALSE;
 	}
-	
+
 	if (nil == self.visitor)
 	{
 		NSLog(@"WTracker.visitor property must be set before [WTracker trackEvent:] invocation");
 		return FALSE;
 	}
-	
+
 	NSMutableString* parameters = [NSMutableString stringWithFormat:@"?app=ios&host=%@&cookie=%@&response=xml&timeout=%d",
 								   self.domain, self.visitor.cookie, (int)(self.idleTimeout * 1000)];
 	if (self.referer)
@@ -81,6 +77,13 @@ static WPinger* gPinger = nil;
     // Add self's properties
     for (NSString* k in self.properties)
         [parameters appendFormat:@"ce_%@=%@", k, self.properties[k]];
+
+    // Add device data
+    [parameters appendFormat:@"&device=%@", [UIDevice currentDevice].model];
+
+    [parameters appendFormat:@"&os=%@", [NSString stringWithFormat:@"%@ %@", [UIDevice currentDevice].systemName, [UIDevice currentDevice].systemVersion]];
+
+    //[parameters appendFormat:@"&browser=%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:(__bridge NSString*)kCFBundleNameKey]];
 
 	// Add visitors properties
 	NSDictionary* prop = self.visitor.properties;
@@ -92,14 +95,15 @@ static WPinger* gPinger = nil;
     for (NSString* k in prop){
         if([k hasPrefix:@"~"]){
             /*
-             * system property
+             * system property - HACK
              */
             [parameters appendFormat:@"&%@=%@", [k substringFromIndex:1], [prop objectForKey:k]];
         }else{
             [parameters appendFormat:@"&ce_%@=%@", k, [prop objectForKey:k]];
         }
     }
-	
+
+
 	// submit asynchronous track request
 	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:
 									[NSURL URLWithString: [[WEventEndpoint stringByAppendingString:parameters] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
