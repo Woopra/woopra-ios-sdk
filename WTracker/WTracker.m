@@ -80,7 +80,7 @@ static WPinger* gPinger = nil;
 
     // Add self's properties
     for (NSString* k in self.properties)
-        [parameters appendFormat:@"ce_%@=%@", k, self.properties[k]];
+        [parameters appendFormat:@"&ce_%@=%@", k, self.properties[k]];
 
 	// Add visitors properties
 	NSDictionary* prop = self.visitor.properties;
