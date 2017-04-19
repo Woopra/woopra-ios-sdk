@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57A5CCDD1EA6C79700264F34 /* WTracker-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 57A5CCDB1EA6C79700264F34 /* WTracker-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57A5CCE11EA6C7A100264F34 /* WTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102801616B033C800EDE529 /* WTracker.m */; };
 		57A5CCE21EA6C7A100264F34 /* WVisitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102801E16B0348700EDE529 /* WVisitor.m */; };
 		57A5CCE31EA6C7A100264F34 /* WEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102802416B03D1000EDE529 /* WEvent.m */; };
@@ -17,7 +16,6 @@
 		57A5CCE71EA6C7D300264F34 /* WVisitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6102801D16B0348700EDE529 /* WVisitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57A5CCE81EA6C7D300264F34 /* WEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 6102802316B03D1000EDE529 /* WEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57A5CCE91EA6C7D300264F34 /* WPropertiesContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CFD05416B081BF00FD1BD0 /* WPropertiesContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		57A5CCEA1EA6C7D300264F34 /* WPinger.h in Headers */ = {isa = PBXBuildFile; fileRef = 61CFD05F16B089E200FD1BD0 /* WPinger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6102801016B033C800EDE529 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6102800F16B033C800EDE529 /* Foundation.framework */; };
 		6102801516B033C800EDE529 /* WTracker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6102801416B033C800EDE529 /* WTracker.h */; };
 		6102801716B033C800EDE529 /* WTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6102801616B033C800EDE529 /* WTracker.m */; };
@@ -193,10 +191,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57A5CCDD1EA6C79700264F34 /* WTracker-iOS.h in Headers */,
 				57A5CCE71EA6C7D300264F34 /* WVisitor.h in Headers */,
 				57A5CCE61EA6C7D300264F34 /* WTracker.h in Headers */,
-				57A5CCEA1EA6C7D300264F34 /* WPinger.h in Headers */,
 				57A5CCE91EA6C7D300264F34 /* WPropertiesContainer.h in Headers */,
 				57A5CCE81EA6C7D300264F34 /* WEvent.h in Headers */,
 			);
