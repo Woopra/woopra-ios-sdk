@@ -72,37 +72,62 @@ static WPinger* gPinger = nil;
 		NSLog(@"WTracker.visitor property must be set before [WTracker trackEvent:] invocation");
 		return FALSE;
 	}
-	
-	NSMutableString* parameters = [NSMutableString stringWithFormat:@"?app=ios&host=%@&cookie=%@&response=xml&timeout=%d",
-								   self.domain, self.visitor.cookie, (int)(self.idleTimeout * 1000)];
-	if (self.referer)
-		[parameters appendFormat:@"&referer=%@", self.referer];
+    
+    NSURLComponents* urlComponents = [NSURLComponents componentsWithURL:[NSURL URLWithString:WEventEndpoint]
+                                                resolvingAgainstBaseURL:true];
+    NSMutableArray* queryItems = [NSMutableArray array];
+	[queryItems addObject:[NSURLQueryItem queryItemWithName:@"app"
+                                                      value:@"ios"]];
+    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"host"
+                                                      value:self.domain]];
+    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"cookie"
+                                                      value:self.visitor.cookie]];
+    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"response"
+                                                      value:@"xml"]];
+    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"timeout"
+                                                      value:[[NSNumber numberWithInt:self.idleTimeout * 1000] description]]];
+    
+    if (self.referer) {
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:@"referer"
+                                                          value:self.referer]];
+    }
 
     // Add self's properties
-    for (NSString* k in self.properties)
-        [parameters appendFormat:@"&ce_%@=%@", k, self.properties[k]];
-
-	// Add visitors properties
-	NSDictionary* prop = self.visitor.properties;
-	for (NSString* k in prop)
-		[parameters appendFormat:@"&cv_%@=%@", k, [prop objectForKey:k]];
-	
-	// Add Event Properties
-	prop = event.properties;
+    for (NSString* k in self.properties) {
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:[NSString stringWithFormat:@"ce_%@", k]
+                                                          value:self.properties[k]]];
+    }
+    
+    // Add visitors properties
+    NSDictionary* prop = self.visitor.properties;
+    for (NSString* k in prop) {
+        [queryItems addObject:[NSURLQueryItem queryItemWithName:[NSString stringWithFormat:@"ce_%@", k]
+                                                          value:[prop objectForKey:k]]];
+    }
+    
+    // Add Event Properties
+    prop = event.properties;
     for (NSString* k in prop){
+        id value = [prop objectForKey:k];
+        
         if([k hasPrefix:@"~"]){
             /*
              * system property
              */
-            [parameters appendFormat:@"&%@=%@", [k substringFromIndex:1], [prop objectForKey:k]];
+            [queryItems addObject:[NSURLQueryItem queryItemWithName:[k substringFromIndex:1]
+                                                              value:value]];
         }else{
-            [parameters appendFormat:@"&ce_%@=%@", k, [prop objectForKey:k]];
+            [queryItems addObject:[NSURLQueryItem queryItemWithName:[NSString stringWithFormat:@"ce_%@", k]
+                                                              value:value]];
         }
     }
+    
+    urlComponents.queryItems = [queryItems copy];
 	
+    NSURL* url = urlComponents.URL;
+    
 	// submit asynchronous track request
-	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:
-									[NSURL URLWithString: [[WEventEndpoint stringByAppendingString:parameters] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
 	[NSURLConnection connectionWithRequest:request delegate:self];
 	
 	return TRUE;
