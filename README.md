@@ -1,3 +1,6 @@
+# DEPRECATED
+This SDK has been replaced with a new version which is hosted in another repo.  This SDK may no longer funciton fully.  Please use the new SDK at: [https://github.com/Woopra/Woopra-iOS](https://github.com/Woopra/Woopra-iOS)
+
 <h2>Woopra iOS SDK Documentation</h2>
 
 When the app loads, you should load the Woopra Tracker and configure it.
